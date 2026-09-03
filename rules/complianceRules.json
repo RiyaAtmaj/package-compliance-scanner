@@ -1,7 +1,7 @@
 [
-  { "id": "LM001", "name": "MRP declaration", "description": "Maximum Retail Price should be visible on the package.", "field": "mrp", "points": 20, "required": true },
-  { "id": "LM002", "name": "Net quantity declaration", "description": "Net quantity should be visible with a unit such as g, kg, ml, or L.", "field": "netQuantity", "points": 20, "required": true },
-  { "id": "LM003", "name": "Manufacturer or packer", "description": "Manufacturer, packer, or importer identity and address should be visible.", "field": "manufacturer", "points": 20, "required": true },
-  { "id": "LM004", "name": "Date information", "description": "Manufacturing, packing, or best-before date information should be visible where applicable.", "field": "manufacturingDate", "points": 20, "required": true },
-  { "id": "LM005", "name": "Consumer care information", "description": "A consumer care phone number, email, or contact address should be visible.", "field": "consumerCare", "points": 20, "required": true }
+  { "id": "LM001", "name": "MRP declaration", "field": "mrp", "requirement": "MRP should be explicitly declared on the package.", "validation": "nonEmpty", "evidencePatterns": ["\\bm\\.?r\\.?p\\.?\\b", "maximum retail"], "severity": "FAIL", "points": 20 },
+  { "id": "LM002", "name": "Net quantity declaration", "field": "netQuantity", "requirement": "Net quantity should be visible with a recognized unit such as g, kg, ml, or L.", "validation": "quantity", "evidencePatterns": ["net", "\\b\\d+(?:\\.\\d+)?\\s*(g|kg|ml|l|litre|liter)\\b"], "severity": "FAIL", "points": 20 },
+  { "id": "LM003", "name": "Manufacturer, packer, or importer", "field": "manufacturer", "requirement": "Manufacturer, packer, or importer identity should be visible.", "evidencePatterns": ["manufactur", "marketed by", "packed by", "imported by"], "severity": "FAIL", "points": 20 },
+  { "id": "LM004", "name": "Manufacturing or packing date", "field": "manufacturingDate", "requirement": "Manufacturing or packing date information should be visible where applicable.", "validation": "date", "evidencePatterns": ["\\bmfg\\b", "\\bmfd\\b", "packed on", "date of pack"], "severity": "FAIL", "points": 20 },
+  { "id": "LM005", "name": "Consumer care information", "field": "consumerCare", "requirement": "Consumer care phone, email, or contact information should be visible.", "evidencePatterns": ["consumer care", "helpline", "customer care", "contact us", "@", "1800"], "severity": "FAIL", "points": 20 }
 ]
