@@ -1,0 +1,7 @@
+[
+  { "id": "LM001", "name": "MRP declaration", "description": "Maximum Retail Price should be visible on the package.", "field": "mrp", "points": 20, "required": true },
+  { "id": "LM002", "name": "Net quantity declaration", "description": "Net quantity should be visible with a unit such as g, kg, ml, or L.", "field": "netQuantity", "points": 20, "required": true },
+  { "id": "LM003", "name": "Manufacturer or packer", "description": "Manufacturer, packer, or importer identity and address should be visible.", "field": "manufacturer", "points": 20, "required": true },
+  { "id": "LM004", "name": "Date information", "description": "Manufacturing, packing, or best-before date information should be visible where applicable.", "field": "manufacturingDate", "points": 20, "required": true },
+  { "id": "LM005", "name": "Consumer care information", "description": "A consumer care phone number, email, or contact address should be visible.", "field": "consumerCare", "points": 20, "required": true }
+]

@@ -1,0 +1,4 @@
+Demo Flour
+Net Quantity 1 kg
+Manufactured by Demo Foods Pvt Ltd
+MFG 08/2026

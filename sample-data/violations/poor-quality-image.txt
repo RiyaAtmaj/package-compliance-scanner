@@ -1,0 +1,1 @@
+Blurred package photograph: declarations are not reliably readable.
